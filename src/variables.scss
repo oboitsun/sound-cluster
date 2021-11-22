@@ -1,0 +1,7 @@
+$blue: #00d1ff;
+$bg: #e5e5e5;
+$gray: #d8d8d8;
+
+@mixin rem($property, $value) {
+  #{$property}: ($value / 16) + rem;
+}

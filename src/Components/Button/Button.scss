@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  @include rem(padding, 15);
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+  }
+  span {
+    font-weight: 700;
+    @include rem(margin-right, 8);
+  }
+  &__filled {
+    background-color: $blue;
+  }
+}

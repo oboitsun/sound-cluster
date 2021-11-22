@@ -1,0 +1,79 @@
+@import "../../variables.scss";
+.DiscoverTabs {
+  &__header {
+    display: flex;
+    align-items: center;
+    .button {
+      &__non-active {
+        background: transparent;
+      }
+      &:hover {
+        box-shadow: none;
+      }
+      span {
+        min-width: max-content;
+      }
+      &__non-active {
+        color: black;
+        .icon {
+          opacity: 0;
+        }
+      }
+      .icon {
+        fill: white;
+        @include rem(height, 14);
+      }
+    }
+  }
+  &__tabs {
+    display: flex;
+    flex-grow: 1;
+    column-gap: 10px;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: auto;
+  }
+  &__searchInput {
+    position: relative;
+    width: 40%;
+    max-width: 308px;
+    min-width: 208px;
+    overflow: hidden;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    padding: 15px 20px;
+    background: white;
+    input {
+      border: none;
+      @include rem(font-size, 20);
+      @include rem(line-height, 20);
+      color: black;
+      width: calc(85% - 20px);
+      caret-color: $blue;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: $gray;
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 20px;
+    }
+  }
+  &__currentTab {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  &__tiles-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, calc(20% - 40px)));
+    gap: 40px;
+  }
+}
