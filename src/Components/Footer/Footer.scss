@@ -1,0 +1,111 @@
+@import "../../variables.scss";
+.Footer {
+  padding: toRem(40) 0;
+  background: #000;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__leftSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__menu-items {
+    display: none;
+  }
+  &__contacts {
+    display: none;
+  }
+  &_logo {
+    margin-top: toRem(16);
+    margin-bottom: toRem(8);
+    color: white;
+    font-weight: 800;
+    font-size: toRem(24);
+    span {
+      color: $blue;
+    }
+  }
+  &__text {
+    text-align: center;
+    color: white;
+    font-size: toRem(8);
+    line-height: 2;
+  }
+  &__copyright {
+    opacity: 0.6;
+    color: white;
+    font-size: toRem(8);
+    line-height: 2;
+  }
+  @media (min-width: 1024px) {
+    &__inner {
+      align-items: stretch;
+    }
+    &_logo {
+      margin-top: unset;
+      margin-bottom: unset;
+    }
+    &__leftSide {
+      max-width: toRem(255);
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &__menu-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: toRem(24);
+    }
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+      .email,
+      .phone {
+        text-decoration: underline;
+      }
+    }
+    &__menu-item {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        margin-left: toRem(8);
+        color: white;
+        font-size: toRem(10);
+
+        transition: color 0.3s;
+      }
+      .icon {
+        height: 1rem;
+        fill: $gray;
+        &_favorites {
+          fill: none;
+          stroke: $gray;
+        }
+      }
+      &:hover {
+        span {
+          color: $blue;
+        }
+        .icon {
+          fill: $blue;
+          &_favorites {
+            fill: $blue;
+            stroke: $blue;
+          }
+        }
+      }
+    }
+    &__text {
+      text-align: left;
+    }
+    &__socials-mob {
+      display: none;
+    }
+  }
+}

@@ -58,15 +58,23 @@ export default function FeaturedAlbums() {
       <div className="container">
         <div className={`${FB}__header`}>
           <SectionHeading Icon={Albums} text="Featured Albums" />
-          <Button>
-            <span>View All Albums</span>
-            <img src="/assets/icons/burger.svg" alt="View All Albums" />
-          </Button>
+          <div className={`${FB}__view-all-desk`}>
+            <Button>
+              <span>View All Albums</span>
+              <img src="/assets/icons/burger.svg" alt="View All Albums" />
+            </Button>
+          </div>
         </div>
         <div className={`${FB}__albums-grid`}>
           {albums.map((album, i) => (
             <AlbumPreview key={i} data={album} />
           ))}
+        </div>
+        <div className={`${FB}__view-all-mob`}>
+          <Button>
+            <span>View All Albums</span>
+            <img src="/assets/icons/burger.svg" alt="View All Albums" />
+          </Button>
         </div>
       </div>
     </div>

@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 @import "./reset";
-
+@import "./variables.scss";
 .App {
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
-  @media (min-width: 1280px) {
-    max-width: 1240px;
+  padding: 0 toRem(20);
+  @media (min-width: toRem(1024)) {
+    max-width: toRem(924);
+  }
+  @media (min-width: toRem(1280)) {
+    max-width: toRem(1280);
   }
 }

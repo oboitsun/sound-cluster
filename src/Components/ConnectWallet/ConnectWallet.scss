@@ -1,0 +1,37 @@
+@import "../../variables.scss";
+.ConnectWallet {
+  &__backdrop {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: all 0.4s;
+    opacity: 0;
+    pointer-events: none;
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  &__modal {
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 95%;
+    max-width: toRem(420);
+    display: grid;
+    row-gap: 8px;
+    padding: toRem(20);
+    background: #e0e0e0;
+  }
+  .icon-logo {
+    height: 20px;
+    margin-right: 4px;
+  }
+}

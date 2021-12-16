@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+.Socials {
+  display: flex;
+  column-gap: toRem(16);
+  fill: currentColor;
+
+  &__icon {
+    width: toRem(20);
+    svg {
+      fill: $blue;
+    }
+  }
+}

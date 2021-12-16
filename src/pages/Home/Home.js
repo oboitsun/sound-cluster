@@ -6,7 +6,7 @@ import DiscoverTabs from "../../Components/DiscoverTabs/DiscoverTabs";
 
 export default function Home() {
   return (
-    <div id="home-page" className="container">
+    <div id="home-page">
       <HeroSectionTabs />
       <FeaturedAlbums />
       <DiscoverTabs />

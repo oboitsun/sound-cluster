@@ -9,7 +9,7 @@
   &__coverArea {
     flex-shrink: 0;
     position: relative;
-    @include rem(width, 88);
+    width: toRem(64);
     height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -33,7 +33,7 @@
     }
   }
   &__albumInfo {
-    padding-left: 16px;
+    padding-left: toRem(12);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -41,18 +41,41 @@
     justify-content: center;
     font-weight: 700;
     .artist {
-      @include rem(font-size, 10);
-      @include rem(line-height, 12);
+      font-size: toRem(10);
+      line-height: toRem(12);
+
       color: $blue;
     }
     .album {
-      @include rem(font-size, 14);
-      @include rem(line-height, 16);
+      font-size: toRem(8);
+      line-height: toRem(10);
     }
     .album-price {
       color: $gray;
-      @include rem(font-size, 10);
-      @include rem(line-height, 16);
+      font-size: toRem(10);
+      line-height: toRem(16);
+    }
+  }
+  @media (min-width: 1280px) {
+    &__coverArea {
+      width: toRem(88);
+    }
+    &__albumInfo {
+      .artist {
+        font-size: toRem(12);
+        line-height: toRem(14);
+
+        color: $blue;
+      }
+      .album {
+        font-size: toRem(10);
+        line-height: toRem(12);
+      }
+      .album-price {
+        color: $gray;
+        font-size: toRem(10);
+        line-height: toRem(16);
+      }
     }
   }
 }

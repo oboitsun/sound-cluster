@@ -20,8 +20,36 @@
   &__albums-grid {
     margin-top: 36px;
     display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
-    @include rem(grid-auto-rows, 88);
+    gap: toRem(25);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: toRem(64);
+  }
+  &__view-all-desk {
+    display: none;
+  }
+  &__view-all-mob {
+    margin-top: toRem(24);
+  }
+
+  @media (min-width: 1024px) {
+    &__albums-grid {
+      margin-top: 36px;
+      display: grid;
+      gap: toRem(25);
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: toRem(64);
+    }
+    &__view-all-desk {
+      display: block;
+    }
+    &__view-all-mob {
+      margin-top: toRem(24);
+      display: none;
+    }
+  }
+  @media (min-width: 1280px) {
+    &__albums-grid {
+      grid-auto-rows: toRem(88);
+    }
   }
 }

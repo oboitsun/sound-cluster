@@ -4,13 +4,13 @@
   align-items: center;
   .icon {
     fill: $blue;
-    @include rem(height, 24);
+    height: toRem(24);
   }
   h3 {
     min-width: max-content;
     margin-left: 8px;
     font-weight: 900;
     color: black;
-    @include rem(font-size, 32);
+    font-size: toRem(32);
   }
 }

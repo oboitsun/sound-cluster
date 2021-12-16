@@ -4,12 +4,16 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 import "./DiscoverTabs.scss";
 import Discover from "../Icons/Discover";
 import CheckMark from "../Icons/CheckMark";
-import SearchInput from "./SearchInput";
 import AllCategories from "./AllCategories";
+
 const DT = "DiscoverTabs";
 const tabsNames = ["All Categories", "Singles", "Albums", "Sets", "Mixs"];
 const tabs = {
   0: <AllCategories />,
+  1: <AllCategories />,
+  2: <AllCategories />,
+  3: <AllCategories />,
+  4: <AllCategories />,
 };
 export default function DiscoverTabs() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -34,7 +38,7 @@ export default function DiscoverTabs() {
               </Button>
             ))}
           </div>
-          <SearchInput />
+          {/* <SearchInput /> */}
         </div>
         <div className={`${DT}__currentTab`}>{tabs[currentTab]}</div>
       </div>

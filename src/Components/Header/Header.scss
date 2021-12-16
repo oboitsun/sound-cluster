@@ -8,10 +8,14 @@
   &_logo {
     color: black;
     font-weight: 800;
-    @include rem(font-size, 32);
+    font-size: toRem(24);
     span {
       color: $blue;
     }
+  }
+  &__burger {
+    color: #00d1ff;
+    width: toRem(20);
   }
   &__flex {
     display: flex;
@@ -19,10 +23,10 @@
     align-items: center;
   }
   &__menu {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    column-gap: clamp(8px, 32px, 32px);
+    column-gap: toRem(24);
   }
 
   &__menu-item {
@@ -31,9 +35,9 @@
     align-items: center;
     cursor: pointer;
     span {
-      @include rem(margin-left, 8);
+      margin-left: toRem(8);
       color: black;
-      font-size: 1rem;
+      font-size: toRem(10);
 
       transition: color 0.3s;
     }
@@ -56,6 +60,23 @@
           stroke: $blue;
         }
       }
+    }
+  }
+  @media (min-width: 1024px) {
+    &__burger {
+      display: none;
+    }
+    &__menu {
+      display: flex;
+    }
+  }
+  @media (min-width: 1280px) {
+    &__menu {
+      column-gap: toRem(32);
+    }
+
+    &_logo {
+      font-size: toRem(32);
     }
   }
 }

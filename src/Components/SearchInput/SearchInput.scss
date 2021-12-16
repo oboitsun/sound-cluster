@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+.SearchInput {
+  position: relative;
+
+  max-width: 308px;
+  min-width: 208px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background: white;
+  input {
+    border: none;
+    font-size: toRem(14);
+    line-height: toRem(17);
+    color: black;
+    width: calc(85% - 20px);
+    caret-color: $blue;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+  }
+}
